@@ -1,0 +1,236 @@
+ // cumledeki bosluqlarin tapilmasi  START.
+
+            string promies = "salm nejesen lisa";
+
+
+            Console.WriteLine(promies.Split(' ').Length-1);
+            Console.ReadLine();
+
+//--------------------------------------------------end
+
+// ededi ortanin tapilmasi START.
+
+ static void Main(string[] args)
+        {
+
+            Console.WriteLine(sum());
+            Console.ReadLine();
+        }
+       static public int sum()
+
+        {
+            int[] arr = { 10, 20, 30, 40 };
+            int size = 0;
+            int tot = 0;
+           
+
+            foreach (var f in arr)
+            {
+              
+                tot += f;
+                size++;
+
+            }
+            return tot / size;
+            
+           
+        }
+
+//--------------------------------------------------end
+
+//arreydeki cut ededleri  bos  arreye yigma START.
+
+  static void Main(string[] args)
+        {
+
+            doubleNum();
+            Console.ReadLine();
+
+        }
+        static public void doubleNum()
+        {
+            int[] arr = { 1, 3, 4, 5, 6, 7, 8, 10, 12, 13 };
+
+            int c = 0;
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    c++;
+
+                }
+            }
+            int[] couple = new int[c];
+            int j = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    couple[j] = arr[i];
+                    Console.WriteLine(couple[j]);
+                    j++;
+
+                }
+
+            }
+//--------------------------------------------------end
+
+//var olan arreyin, ededi ortasindan  boyuk olan ededleri  arreye  yigma START;
+
+ static void Main(string[] args)
+        {
+            foreach (var num in arr())
+            {
+                Console.WriteLine(num);
+            }
+            
+            Console.ReadLine();
+
+        }
+       static int[] arr()
+        {
+            int[] nums = { 10, 20, 30, 40, 50 };
+            int lenght = 0;
+            int total = 0;
+            int sum = 0;
+
+            foreach (var f in nums)
+            {
+                total += f;
+                lenght++;
+               
+            }
+            sum = total / lenght;
+            int[] ar = new int[lenght];
+            int n = 0;
+            foreach (var i in nums)
+            {
+                if (i > sum)
+                {
+                    ar[n++] = i;
+                }
+            }
+
+            return ar;
+        }
+//--------------------------------------------------end
+
+//Quvvet ustu ededin tapilmasi START;
+
+ static void Main()
+        {
+
+
+
+            Console.WriteLine(aboveNumber(3,4));
+            Console.ReadLine();
+        }
+
+        static int aboveNumber(int N, int A)
+        {
+            int C = 1;
+            for (int i = 0; i < A; i++)
+            {
+                C*=N;
+            }
+            return C;
+        }
+
+//--------------------------------------------------end
+
+//Most get long word START.
+
+ static void Main()
+        {
+
+            string[] aroo = { "kamran", "Elvin", "Ruslan", "Kenan", "Muhammed" };
+            Console.WriteLine(GetLongWord(aroo));
+            Console.ReadLine();
+        }
+
+        static string GetLongWord (string[] arr)
+        {
+            string longWord = "";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i].Length > longWord.Length)
+                {
+                    longWord = arr[i];
+                }
+            }
+            return longWord;
+        }
+
+//--------------------------------------------------end
+
+//strink arreyindeki sozleri tek sting e cixarir aralarina vergul qoyaraq START.
+
+ static void Main()
+        {
+            string[] aroo = { "kamran", "elvin", "hesen", "veli" };
+            Console.WriteLine(longArr(aroo));
+            Console.ReadLine();
+           
+        }
+        static string longArr(string[]arr)
+        {
+            string getWords = " ";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                getWords = string.Join(",",arr);
+            }
+            return getWords;
+        }
+
+//--------------------------------------------------end
+
+//iki array var icindeki eyni sozleri  3 uncu arreyde cemleyir START.
+
+        static void Main()
+        {
+            string[] aroo = { "kamran", "elvin", "hesen", "velwi", "veli" };
+            string[] ao1 = { "kamran", "eelvin", "hresen", "velri" , "veli" };
+            twoarr(aroo, ao1);
+            Console.ReadLine();
+           
+        }
+        static void twoarr(string[]ar1, string[] ar2)
+        {
+            int num = 0;
+
+            string[] ar3=new string[num];
+            for (int i = 0; i < ar1.Length; i++)
+            {
+                for (int f = 0; f < ar2.Length; f++)
+                {
+                    if (ar1[i] == ar2[f])
+                    {
+                        num++;
+                        Array.Resize(ref ar3, num);
+                        ar3[num - 1] = ar1[i];
+                    }
+                }
+            }
+            for (int i = 0; i < ar3.Length; i++)
+            {
+                Console.WriteLine(ar3[i]);
+            }
+        }
+
+//--------------------------------------------------end
+
+
+
+
+//Sozleri tersine cevirme START.
+
+string str = "salam ilkin nejesen";
+
+           
+            string res = string.Join(" ", str.Split(' ').Select(s => new String(s.Reverse().ToArray())));
+
+            Console.WriteLine(res);
+            Console.ReadLine();
+//--------------------------------------------------end
